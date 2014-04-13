@@ -1,0 +1,21 @@
+extensions:
+	texy: Librette\Texy\DI\TexyExtension
+	applyMock: LibretteTests\Texy\MockApplyExtension
+services:
+	myConfigurator: Librette\Texy\Configurators\OptionsConfigurator([emoticonModule: [class: bar]])
+
+texy:
+	article:
+		configurators:
+			- disableImages
+			- Librette\Texy\Configurators\DisableLinksConfigurator
+			- @myConfigurator
+		options:
+			headingModule:
+				top: 2
+	comment:
+		cache: [expiration: +1 hour]
+	foo:
+		cache: false
+		factory: LibretteTests\Texy\MyTexyFactory
+
