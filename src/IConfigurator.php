@@ -1,7 +1,7 @@
 <?php
 namespace Librette\Texy;
 
-use Texy\Texy;
+use Texy;
 
 /**
  * @author David Matejka

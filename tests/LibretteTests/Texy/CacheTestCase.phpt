@@ -4,7 +4,7 @@ namespace LibretteTests\Texy;
 use Librette;
 use Nette;
 use Tester;
-use Texy\Texy;
+
 
 require_once __DIR__ . '/../bootstrap.php';
 
@@ -15,7 +15,7 @@ class MyConfigurator implements Librette\Texy\IConfigurator
 	public $counter = 0;
 
 
-	public function configure(Texy $texy)
+	public function configure(\Texy $texy)
 	{
 		$texy->addHandler('beforeParse', function () {
 			$this->counter++;

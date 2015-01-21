@@ -10,10 +10,13 @@
 		}
 	],
 	"require": {
-		"nette/nette": "~2.1@dev",
-		"dg/texy": "@dev"
+		"nette/di": "~2.2",
+		"nette/utils": "~2.2",
+		"nette/caching": "~2.2",
+		"dg/texy": "@stable"
 	},
 	"require-dev": {
+		"nette/bootstrap": "~2.2",
 		"nette/tester": "@dev"
 	},
 	"autoload": {

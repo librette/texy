@@ -8,7 +8,7 @@ interface ITexyFactory
 {
 
 	/**
-	 * @return \Texy\Texy
+	 * @return \Texy
 	 */
 	public function create();
 }

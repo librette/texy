@@ -3,7 +3,7 @@ extensions:
 	applyMock: LibretteTests\Texy\MockApplyExtension
 services:
 	myConfigurator: Librette\Texy\Configurators\OptionsConfigurator([emoticonModule: [class: bar]])
-
+	- Nette\Caching\Storages\FileStorage(%tempDir%)
 texy:
 	article:
 		configurators:

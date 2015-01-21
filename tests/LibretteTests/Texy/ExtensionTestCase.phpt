@@ -6,7 +6,7 @@ use Librette\Texy\ICachingStrategy;
 use Librette\Texy\ITexyFactory;
 use Nette;
 use Tester;
-use Texy\Texy;
+use Texy;
 
 require_once __DIR__ . '/../bootstrap.php';
 
@@ -32,7 +32,7 @@ class MyTexyFactory implements ITexyFactory
 {
 
 	/**
-	 * @return \Texy\Texy
+	 * @return \Texy
 	 */
 	public function create()
 	{
@@ -70,6 +70,7 @@ class ExtensionTestCase extends Tester\TestCase
 	public function testBasic()
 	{
 		$configurator = new Nette\Configurator();
+		unset($configurator->defaultExtensions['nette']);
 		$configurator->addConfig(__DIR__ . '/config/basic.neon');
 		$configurator->setTempDirectory(TEMP_DIR);
 		$container = $configurator->createContainer();

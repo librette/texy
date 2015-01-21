@@ -2,8 +2,8 @@
 namespace Librette\Texy\Configurators;
 
 use Librette\Texy\IConfigurator;
-use Texy\Configurator;
-use Texy\Texy;
+use TexyConfigurator;
+use Texy;
 
 /**
  * @author David Matejka
@@ -13,7 +13,7 @@ class SafeModeConfigurator implements IConfigurator
 
 	public function configure(Texy $texy)
 	{
-		Configurator::safeMode($texy);
+		TexyConfigurator::safeMode($texy);
 	}
 
 }

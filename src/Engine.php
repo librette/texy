@@ -2,11 +2,12 @@
 namespace Librette\Texy;
 
 use Librette\Texy\Configurators\OptionsConfigurator;
+use Nette\Object;
 
 /**
  * @author David Matejka
  */
-class Engine extends \Nette\Object
+class Engine extends Object
 {
 
 	/** @var ICachingStrategy */
@@ -33,7 +34,7 @@ class Engine extends \Nette\Object
 	 * @param array $options
 	 * @return string
 	 */
-	public function process($text, $options = array())
+	public function process($text, $options = [])
 	{
 		$processCallback = function () use ($text, $options) {
 			return $this->getTexy($options)->process($text, isset($options['singleLine']) ? $options['singleLine'] : FALSE);
@@ -46,9 +47,9 @@ class Engine extends \Nette\Object
 
 	/**
 	 * @param array $options
-	 * @return \Texy\Texy
+	 * @return \Texy
 	 */
-	public function getTexy($options = array())
+	public function getTexy($options = [])
 	{
 		$texy = $this->texyFactory->create($options);
 		if (!empty($options)) {
@@ -68,7 +69,7 @@ class Engine extends \Nette\Object
 	private function calculateKey($text, $options)
 	{
 		//TODO: key from configurator
-		return array("optionmethod" => $options, "text" => $text);
+		return ["methodOptions" => $options, "text" => $text];
 	}
 
 }

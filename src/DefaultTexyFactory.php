@@ -2,7 +2,7 @@
 namespace Librette\Texy;
 
 use Nette\Object;
-use Texy\Texy;
+use Texy;
 
 /**
  * @author David Matejka

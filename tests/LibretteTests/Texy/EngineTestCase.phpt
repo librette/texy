@@ -4,7 +4,7 @@ namespace LibretteTests\Texy;
 use Librette;
 use Nette;
 use Tester;
-use Texy\Texy;
+use Texy;
 
 require_once __DIR__ . '/../bootstrap.php';
 
