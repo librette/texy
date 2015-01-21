@@ -10,4 +10,5 @@ interface IConfigurator
 {
 
 	public function configure(Texy $texy);
+
 }

@@ -8,8 +8,8 @@ interface ICachingStrategy
 {
 
 	/**
-	 * @param mixed $key cache identifier. NOT serialized
-	 * @param callable $callback
+	 * @param mixed cache identifier. NOT serialized
+	 * @param callable
 	 * @return string
 	 */
 	public function load($key, $callback);

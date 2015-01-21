@@ -8,9 +8,6 @@ use Nette\Object;
 
 /**
  * @author David Matejka
- *
- * @method setDependencies(array $dependencies)
- * @method array getDependencies()
  */
 class StandardCache extends Object implements ICachingStrategy
 {
@@ -21,16 +18,34 @@ class StandardCache extends Object implements ICachingStrategy
 	protected $cache;
 
 	/** @var array */
-	protected $dependencies = array();
+	protected $dependencies = [];
 
 
 	/**
-	 * @param array $dependencies
-	 * @param IStorage $cacheStorage
+	 * @param array
+	 * @param IStorage
 	 */
 	public function __construct(array $dependencies, IStorage $cacheStorage)
 	{
 		$this->cache = new Cache($cacheStorage, self::CACHE_NAMESPACE);
+		$this->dependencies = $dependencies;
+	}
+
+
+	/**
+	 * @return array
+	 */
+	public function getDependencies()
+	{
+		return $this->dependencies;
+	}
+
+
+	/**
+	 * @param array
+	 */
+	public function setDependencies($dependencies)
+	{
 		$this->dependencies = $dependencies;
 	}
 

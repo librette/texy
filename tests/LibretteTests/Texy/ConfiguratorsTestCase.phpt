@@ -29,6 +29,7 @@ class ConfiguratorsTestCase extends Tester\TestCase
 		Tester\Assert::false($texy->allowed['image']);
 	}
 
+
 	public function testDisableLinks()
 	{
 		$texy = new Texy();
@@ -37,6 +38,7 @@ class ConfiguratorsTestCase extends Tester\TestCase
 		$disableLinksConfigurator->configure($texy);
 		Tester\Assert::false($texy->allowed['link/url']);
 	}
+
 
 	public function testSafeMode()
 	{
@@ -47,15 +49,16 @@ class ConfiguratorsTestCase extends Tester\TestCase
 		Tester\Assert::false($texy->allowed['image']);
 	}
 
+
 	public function testOptionsConfigurator()
 	{
 		$texy = new Texy();
-		$options = array(
+		$options = [
 			'nontextParagraph' => 'foo',
-			'scriptModule' => array(
+			'scriptModule'     => [
 				'separator' => ';'
-			)
-		);
+			]
+		];
 		$configurator = new Librette\Texy\Configurators\OptionsConfigurator($options);
 		$configurator->configure($texy);
 		Tester\Assert::same('foo', $texy->nontextParagraph);

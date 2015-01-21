@@ -19,8 +19,8 @@ class TexyAccessor extends Object
 
 
 	/**
-	 * @param Container $container
-	 * @param string $prefix
+	 * @param Container
+	 * @param string
 	 */
 	public function __construct(Container $container, $prefix = 'texy')
 	{
@@ -30,7 +30,7 @@ class TexyAccessor extends Object
 
 
 	/**
-	 * @param $name
+	 * @param string
 	 * @return Engine
 	 */
 	public function get($name)

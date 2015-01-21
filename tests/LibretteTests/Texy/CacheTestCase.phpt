@@ -41,13 +41,14 @@ class CacheTestCase extends Tester\TestCase
 		$memoryStorage = new Nette\Caching\Storages\MemoryStorage();
 		$factory = new Librette\Texy\DefaultTexyFactory();
 		$factory->addConfigurator($myConfigurator = new MyConfigurator());
-		$engine = new Librette\Texy\Engine($factory, new Librette\Texy\Caching\StandardCache(array(), $memoryStorage));
+		$engine = new Librette\Texy\Engine($factory, new Librette\Texy\Caching\StandardCache([], $memoryStorage));
 		$src = 'Hi!';
 		$engine->process($src);
 		Tester\Assert::same(1, $myConfigurator->counter);
 		$engine->process($src);
 		Tester\Assert::same(1, $myConfigurator->counter);
 	}
+
 
 	public function testNoCache()
 	{

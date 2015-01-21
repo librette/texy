@@ -18,8 +18,8 @@ class Engine extends Object
 
 
 	/**
-	 * @param ITexyFactory $texyFactory
-	 * @param ICachingStrategy $cachingStrategy
+	 * @param ITexyFactory
+	 * @param ICachingStrategy
 	 */
 	public function __construct(ITexyFactory $texyFactory, ICachingStrategy $cachingStrategy)
 	{
@@ -30,8 +30,8 @@ class Engine extends Object
 
 
 	/**
-	 * @param string $text
-	 * @param array $options
+	 * @param string
+	 * @param array
 	 * @return string
 	 */
 	public function process($text, $options = [])
@@ -46,7 +46,7 @@ class Engine extends Object
 
 
 	/**
-	 * @param array $options
+	 * @param array
 	 * @return \Texy
 	 */
 	public function getTexy($options = [])
@@ -62,8 +62,8 @@ class Engine extends Object
 
 
 	/**
-	 * @param string $text
-	 * @param $options
+	 * @param string
+	 * @param array
 	 * @return array
 	 */
 	private function calculateKey($text, $options)

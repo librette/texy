@@ -11,7 +11,7 @@ class DefaultTexyFactory extends Object implements ITexyFactory
 {
 
 	/** @var IConfigurator[] */
-	protected $configurators = array();
+	protected $configurators = [];
 
 
 	/**

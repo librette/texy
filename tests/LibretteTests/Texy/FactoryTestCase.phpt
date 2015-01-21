@@ -3,8 +3,8 @@ namespace LibretteTests\Texy;
 
 use Librette;
 use Nette;
-use Tester\Assert;
 use Tester;
+use Tester\Assert;
 
 require_once __DIR__ . '/../bootstrap.php';
 

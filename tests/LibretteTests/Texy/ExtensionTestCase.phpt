@@ -89,7 +89,7 @@ class ExtensionTestCase extends Tester\TestCase
 		/** @var EngineMock $engine */
 		$engine = $accessor->get('comment');
 		Tester\Assert::type('\Librette\Texy\Caching\StandardCache', $cache = $engine->cachingStrategy);
-		Tester\Assert::same(array('expiration' => '+1 hour'), $cache->getDependencies());
+		Tester\Assert::same(['expiration' => '+1 hour'], $cache->getDependencies());
 
 		/** @var EngineMock $engine */
 		$engine = $accessor->get('foo');

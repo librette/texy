@@ -2,8 +2,8 @@
 namespace Librette\Texy\Configurators;
 
 use Librette\Texy\IConfigurator;
-use TexyConfigurator;
 use Texy;
+use TexyConfigurator;
 
 /**
  * @author David Matejka

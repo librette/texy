@@ -11,7 +11,7 @@ class OptionsConfigurator implements IConfigurator
 {
 
 	/** @var array */
-	protected $options = array();
+	protected $options = [];
 
 
 	/**
@@ -30,8 +30,8 @@ class OptionsConfigurator implements IConfigurator
 
 
 	/**
-	 * @param Texy|object $object
-	 * @param array $options
+	 * @param Texy|object
+	 * @param array
 	 * @return Texy|object
 	 */
 	protected function applyOptions($object, $options)

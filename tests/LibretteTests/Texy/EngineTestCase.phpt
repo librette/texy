@@ -35,7 +35,7 @@ class EngineTestCase extends Tester\TestCase
 
 	public function testAdditionalOptions()
 	{
-		$result = $this->texy->process("Hello world!\n=====", array('headingModule' => array('top' => 2)));
+		$result = $this->texy->process("Hello world!\n=====", ['headingModule' => ['top' => 2]]);
 		Tester\Assert::same("\n<h2>Hello world!</h2>\n", $result);
 	}
 }
