@@ -10,6 +10,7 @@
 		}
 	],
 	"require": {
+		"php": ">=5.4",
 		"nette/di": "~2.2",
 		"nette/utils": "~2.2",
 		"nette/caching": "~2.2",
